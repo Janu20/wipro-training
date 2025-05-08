@@ -4,18 +4,31 @@ using System.Security.Cryptography.X509Certificates;
 
 class Program
 {
-    public static void Main(string[] args)
+    public static void Main (){
 
-    {
-        List<int> num = new List<int>();
-        num.Add(1);
-        num.Add(2);
-        num.Add(3);
-        num.Add(4);
+        List <string> fruits = new List<string>(){"Apple","Banana"};
+        fruits.Add("Cherry");
+        fruits.Add("Mango");
+        fruits.Add("Grapes");
 
-        foreach (int item in num)
-        {
+        fruits.Insert(2,"Blueberry");
+
+        fruits.Remove("Banana");
+
+        fruits.RemoveAt(3);
+
+        if(fruits.Contains("Apple")){
+            Console.WriteLine("Present 'apple'");
+        }
+        else{
+            Console.WriteLine("Not present 'apple'");
+        }
+
+        fruits.Sort();
+
+        foreach(string intem in fruits){
             Console.WriteLine(item);
         }
-    }
+}
+
 }
