@@ -31,6 +31,10 @@ class Program
 
         Console.WriteLine("Contains student value of  Janani = " + Student.ContainsKey(0));
 
+        //update student by key
+
+        Student[1] = "Jana";
+       
         //print all key and value
 
         foreach (var item in Student)
