@@ -1,0 +1,1 @@
+ Console.WriteLine(employees.Find(e => e.Name == "Kowsi"));

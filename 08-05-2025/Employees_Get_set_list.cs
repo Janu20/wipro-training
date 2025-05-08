@@ -39,6 +39,6 @@ class Program
         }
         Console.WriteLine("Total number of employees = " + employees.Count);
 
-
+        Console.WriteLine(employees.Find(e => e.Name.EndsWith('a')));
     }
 }
