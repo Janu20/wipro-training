@@ -12,7 +12,7 @@
 
     internal class Managar :Employee
     {
-        public void Man()
+        public void work()
         {
             Console.WriteLine("This is manager method");
         }
