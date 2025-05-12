@@ -36,7 +36,7 @@ class Speaker : IDeviceControl
     }
 }
 
-// main claa
+// main class
 
     class Program
 {
