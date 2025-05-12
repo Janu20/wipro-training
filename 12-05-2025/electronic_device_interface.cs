@@ -38,15 +38,20 @@ class Speaker : IDeviceControl
 
 // main claa
 
+    class Program
+{
+    
+
     public static void Main()
     {
 
-        IDeviceControl ID = new SmartTv(); 
-        Speaker ID1 = new Speaker();
+        IDeviceControl ID;
 
-        ID1.TurnOn();
-        ID1.TurnOff();
+        ID = new SmartTv(); 
+        ID.TurnOn();
+        ID.TurnOff();
 
+        ID = new Speaker();
         ID.TurnOn();
         ID.TurnOff();
 
@@ -54,4 +59,4 @@ class Speaker : IDeviceControl
 
 
     }
-
+}
