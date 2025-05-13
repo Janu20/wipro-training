@@ -20,13 +20,20 @@ class TestClass
 
     static void Main()
     {
-        CustomDel hiDel, byeDel, multiDel;
+        CustomDel hiDel, byeDel, multiDel,multidelminus;
 
         hiDel = Hello;
 
         byeDel = Goodbye;
 
+ // adding both delegates
+
         multiDel = hiDel + byeDel;
+        
+// sub byedel methods
+
+        multidelminus = hiDel-byeDel;
+
 
         Console.WriteLine("Invoking delegate hiDel : ");
         hiDel("A");
@@ -36,6 +43,9 @@ class TestClass
 
         Console.WriteLine("Invoking delegate multiDel : ");
         multiDel("C");
+       
+       Console.WriteLine("Invoking delegate multidelminus : ");
+        multidelminus("d");
 
 
 
