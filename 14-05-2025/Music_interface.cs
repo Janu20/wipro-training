@@ -40,26 +40,3 @@
             Console.WriteLine("Apple Music playback stopped");
         }
     }
-class Program
-{
- 
-    static void Main()
-    {
-        IMusicPlayer im;
-
-        im = new SpotifyPlayer();
-
-        im.Play("Munbe va en Anbe ...");
-        im.Pause();
-        im.Stop();
-
-        im = new AppleMusicPlayer();
-        im.Play("Po ne Po...");
-        im.Pause();
-        im.Stop();
-
-
-    }
-}
-
-
