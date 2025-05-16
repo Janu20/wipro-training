@@ -24,7 +24,8 @@ class Program
                 connection.Open();
                 SqlDataReader rdr = command.ExecuteReader();
 
-                Console.WriteLine( "City".PadRight(20) + "Company Name".PadRight(20)+"Unit Price".PadRight(25)+"Product Name");                Console.WriteLine(new string('-', 25) + new string('-', 20) + new string('-', 30));
+                Console.WriteLine( "City".PadRight(20) + "Company Name".PadRight(40)+"Unit Price".PadRight(30).PadLeft(20)+"Product Name"); 
+                Console.WriteLine(new string('-', 25) + new string('-', 20) + new string('-', 30)+new string('-',30));
 
 
                 while (rdr.Read())
@@ -39,7 +40,7 @@ class Program
 
                     string Productname = rdr[3].ToString();
 
-                    Console.WriteLine( City.PadRight(20) + CompanyName.PadRight(25)+UnitPrice.PadRight(20)+Productname);
+                    Console.WriteLine( City.PadRight(20) + CompanyName.PadRight(40)+UnitPrice.PadRight(30).PadLeft(20)+Productname);
                 }
                 rdr.Close();
             }
