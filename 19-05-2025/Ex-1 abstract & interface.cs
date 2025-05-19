@@ -1,88 +1,71 @@
- abstract class SmartDevice
-  {
-      public abstract void TurnOn();
 
-      public void ShowStatus()
-      {
-          Console.WriteLine("Device status Active");
-      }
-  }
-  namespace ConsoleApp1
+
+
+using System;
+
+
+abstract class SmartDevice
 {
-    interface IRemoteControl
+    public abstract void TurnOn();
+    public void ShowStatus()
     {
-       public void IncreaseVolume();
-
-        public void DecreaseVolume();
+        Console.WriteLine("Device status: Active");
     }
 }
-     class SmartLight : SmartDevice , IRemoteControl
+interface IRemoteControl
+{
+    void IncreaseVolume();
+    void DecreaseVolume();
+}
+class SmartLight : SmartDevice, IRemoteControl
+{
+    public override void TurnOn()
     {
-        public override void TurnOn()
-        {
-            Console.WriteLine("Smart Light turned on");
-        }
+        Console.WriteLine("smart light turned on");
+    }
     public void IncreaseVolume()
     {
-    Console.WriteLine("Lights do not support volume controls");
+        Console.WriteLine("lights do not support volume control");
     }
-
-public void DecreaseVolume()
-{
-    Console.WriteLine("Lights do not support volume controls");
+    public void DecreaseVolume()
+    {
+        Console.WriteLine("lights do not support volume control");
+    }
 }
-
-
-    }
-    internal class SmartSpeaker : SmartDevice,IRemoteControl
+class SmartSpeaker : SmartLight, IRemoteControl
+{
+    public override void TurnOn()
     {
-        public override void TurnOn()
-        {
-            Console.WriteLine("Smart speaker is turned on");
-        }
-
-        public void IncreaseVolume()
-        {
-            Console.WriteLine("Volume increased");
-        }
-        public void DecreaseVolume()
-        {
-            Console.WriteLine("Volume decreased");
-        }
+        Console.WriteLine("smart speaker turned on");
     }
-    class Program
+    public void IncreaseVolume()
     {
-
-        public static void Main()
-        {
-            SmartDevice SD;
-            SD  = new SmartSpeaker();
-
-            SD.TurnOn();
-            IRemoteControl remoteControl;
-            remoteControl = new SmartSpeaker();
-
-
-            remoteControl.IncreaseVolume();
-                remoteControl.DecreaseVolume();
-            
-
-            SD = new SmartLight();
-
-           
-
-            SD.TurnOn();
-            IRemoteControl remoteControl1;
-            remoteControl1 = new SmartLight();
-
-
-            remoteControl1.IncreaseVolume();
-            remoteControl1.DecreaseVolume();
-
-
-
-
-
-
-        }
+        Console.WriteLine("volume increased");
     }
+    public void DecreaseVolume()
+    {
+        Console.WriteLine("volume decreased");
+    }
+}
+class Program
+{
+    static void Main()
+    {
+        SmartDevice light = new SmartLight();
+        SmartDevice speaker = new SmartSpeaker();
+
+        Console.WriteLine("");
+        light.ShowStatus();
+        light.TurnOn();
+        ((IRemoteControl)light).IncreaseVolume();
+        ((IRemoteControl)light).DecreaseVolume();
+
+        Console.WriteLine("");
+        speaker.ShowStatus();
+        speaker.TurnOn();
+        ((IRemoteControl)speaker).IncreaseVolume();
+        ((IRemoteControl)speaker).DecreaseVolume();
+
+
+    }
+}
