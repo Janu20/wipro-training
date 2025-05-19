@@ -43,11 +43,11 @@ namespace ConsoleApp1
 
             // Stack of new books
             Stack<Book> newBooks = new Stack<Book>();
-            newBooks.Push(new Book("The Catcher in the Rye", "J.D. Salinger"));
-            newBooks.Push(new Book("Brave New World", "Aldous Huxley"));
-            newBooks.Push(new Book("Moby-Dick", "Herman Melville"));
+            newBooks.Push(new Book("Tfff", "fff1"));
+            newBooks.Push(new Book("hhhh", "hhh1"));
+            newBooks.Push(new Book("gggg", "ggg1"));
 
-            Console.WriteLine("\n📚 New Books Stack:");
+            Console.WriteLine("\nNew Books Stack:");
             foreach (var book in newBooks)
             {
                 Console.WriteLine($"- {book.Title} by {book.Author}");
@@ -64,14 +64,14 @@ namespace ConsoleApp1
             }
 
             // Print remaining borrowed books
-            Console.WriteLine("\n📖 Remaining Borrowed Books:");
+            Console.WriteLine("\n Remaining Borrowed Books:");
             foreach (var book in bookqueue)
             {
                 Console.WriteLine($"- {book.Title} by {book.Author}");
             }
 
             // Print remaining new books
-            Console.WriteLine("\n📚 Remaining New Books:");
+            Console.WriteLine("\nRemaining New Books:");
             foreach (var book in newBooks)
             {
                 Console.WriteLine($"- {book.Title} by {book.Author}");
