@@ -98,7 +98,7 @@ namespace ConsoleApp1
                 s1.Selectionsort(numbers);
 
                 Console.WriteLine("Insertion sort : ");
-                s1.Selectionsort(numbers);
+                s1.Insertionsort(numbers);
 
             }
 
