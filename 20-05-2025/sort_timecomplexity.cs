@@ -6,13 +6,13 @@ namespace ConsoleApp1
 {
     class Sort
     {
-        public void Bubblesort(List<int> numbers)
+        public void Bubblesort(int[] numbers)
         {
             Stopwatch sw = Stopwatch.StartNew();
 
-            for (int i = 0; i < numbers.Count - 1; i++)
+            for (int i = 0; i < numbers.Length; i++)
             {
-                for (int j = i + 1; j < numbers.Count; j++)
+                for (int j = i + 1; j < numbers.Length; j++)
                 {
                     int temp;
                     if (numbers[i] > numbers[j])
@@ -27,18 +27,19 @@ namespace ConsoleApp1
             }
             sw.Stop();
             Console.WriteLine("Bubble Sort Time: " + sw.Elapsed.TotalSeconds.ToString("F6") + " ms");
-            foreach (var num in numbers)
+
+            for (int i = 0; i < numbers.Length; i++)
             {
-                Console.WriteLine(num);
+                Console.WriteLine(numbers[i]);
             }
         }
-        public void Selectionsort(List<int>numbers)
+        public void Selectionsort(int[] numbers)
         {
             Stopwatch sw = Stopwatch.StartNew();
 
-            for (int i =0;i< numbers.Count - 1; i++)
+            for (int i =0;i< numbers.Length; i++)
             {
-                for(int j = i + 1; j < numbers.Count; j++)
+                for(int j = i + 1; j < numbers.Length; j++)
                 {
                     int min = numbers[0];
 
@@ -50,17 +51,17 @@ namespace ConsoleApp1
             }
             sw.Stop();
             Console.WriteLine("Selection Sort Time: " + sw.Elapsed.TotalSeconds.ToString("F6") + " ms");
-            foreach (var num in numbers)
+            for (int i = 0; i < numbers.Length; i++)
             {
-                Console.WriteLine(num);
+                Console.WriteLine(numbers[i]);
             }
 
         }
-        public void Insertionsort(List<int> numbers)
+        public void Insertionsort(int[] numbers)
         {
             Stopwatch sw = Stopwatch.StartNew();
 
-            for (int i = 1; i < numbers.Count; i++)
+            for (int i = 1; i < numbers.Length; i++)
             {
                 int key = numbers[i];
                 int j = i - 1;
@@ -77,9 +78,10 @@ namespace ConsoleApp1
             sw.Stop();
             Console.WriteLine("Insertion Sort Time: " + sw.Elapsed.TotalSeconds.ToString("F6") + " ms");
 
-            foreach (var num in numbers)
+
+            for (int i = 0; i < numbers.Length; i++)
             {
-                Console.WriteLine(num);
+                Console.WriteLine(numbers[i]);
             }
         }
 
@@ -88,16 +90,23 @@ namespace ConsoleApp1
         {
             {
 
-                List<int> numbers = new List<int>() { 3, 4, 5, 1, 7, 8, 2, 10,6,9,20,18,19,16,15,17,11,12,14,13 };
+                int[] numbers = new int[20];
+
+                Console.WriteLine("Enter the 20 numbers to be sorted : ");
+
+               for(int i = 0; i < numbers.Length; i++)
+                {
+                   numbers[i] = int.Parse(Console.ReadLine());
+                }
 
                 Sort s1 = new Sort();
 
                 s1.Bubblesort(numbers);
 
-                Console.WriteLine("Selection sort : ");
+               
                 s1.Selectionsort(numbers);
 
-                Console.WriteLine("Insertion sort : ");
+               
                 s1.Insertionsort(numbers);
 
             }
