@@ -11,12 +11,12 @@ namespace ConsoleApp4
         static void Print(object message)
         {
             Console.WriteLine(message);
-            
+
         }
 
         static void Main()
         {
-            Thread mythread = new Thread  (new ParameterizedThreadStart(Print));
+            Thread mythread = new Thread(new ParameterizedThreadStart(Print));
             mythread.Start("Hello");
         }
     }
