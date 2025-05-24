@@ -1,0 +1,41 @@
+using System;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    internal class CancellationExample
+    {
+        public static async Task DoWorkAsync(CancellationToken token)
+        {
+            Console.WriteLine("Task started...");
+
+            for (int i = 0; i < 10; i++)
+            {
+                if (token.IsCancellationRequested)
+                {
+                    Console.WriteLine("Task was cancelled.");
+                    return;  
+                }
+
+                Console.WriteLine("Working... " + i);
+                await Task.Delay(500);
+            }
+
+            Console.WriteLine("Task completed.");
+        }
+
+        public static async Task Main(string[] args)
+        {
+            CancellationTokenSource cts = new CancellationTokenSource();
+
+            Task task = DoWorkAsync(cts.Token);
+
+           
+            await Task.Delay(2000);
+            cts.Cancel();
+
+            await task;
+        }
+    }
+}
