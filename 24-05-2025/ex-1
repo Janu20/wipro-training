@@ -1,0 +1,67 @@
+using System;
+using System.Threading;
+
+namespace ConsoleApp4
+{
+    internal class Numbers
+    {
+        //control flags
+        static bool pause = false;
+        static bool stop = false;
+
+        // Worker method for the thread
+        static void Method()
+        {
+            for (int i = 1; i <= 100; i++)
+            {
+                // Stop the thread
+                if (stop)
+                {
+                    Console.WriteLine("Thread is stopped");
+                    break;
+                }
+
+                // Pause the thread
+                while (pause)
+                {
+                    Console.WriteLine("Thread is paused...");
+                    Thread.Sleep(500); // wait while paused
+                }
+
+                // Print the number
+                Console.WriteLine(i);
+                Thread.Sleep(500); 
+            }
+
+            Console.WriteLine("Thread completed");
+        }
+
+        public static void Main(string[] args)
+        {
+            // Create and start the thread
+            Thread thread = new Thread(Method);
+            thread.Start();
+
+            // Let the thread run for a few seconds
+            Thread.Sleep(3000);
+
+            // Pause the thread
+            pause = true;
+            Console.WriteLine("Paused status: " + thread.ThreadState);
+            Thread.Sleep(5000); // Wait while thread is paused
+
+            // Resume the thread
+            pause = false;
+            Console.WriteLine("Resumed status: " + thread.ThreadState);
+            Thread.Sleep(3000); // Let it run a bit more
+
+            // Stop the thread
+            stop = true;
+            Console.WriteLine("Stopped status: " + thread.ThreadState);
+
+            
+           stop = false;
+           
+        }
+    }
+}
