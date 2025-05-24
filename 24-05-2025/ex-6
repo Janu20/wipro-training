@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    internal class WhenAny
+    {
+        public static async Task Methods(string name,int delay)
+        {
+            await Task.Delay(delay);
+            Console.WriteLine("This Task name is : " + name + " Delay = " + delay);
+            
+
+        }
+
+        public static async Task Main()
+        {
+            Task t1 = Methods("Task 1", 2000);
+            Task t2 = Methods("Task 2", 4000);
+            Task t3 = Methods("Task 3", 6000);
+
+
+
+            await Task.WhenAny(t1, t2, t3);
+            Console.WriteLine("First task copleted");
+            
+            
+        }
+    }
+}
