@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    internal class Threadpool
+    {
+        public static void Processitem(object item)
+        {
+            Console.WriteLine("Processing the item " + " * " + item + " * ");
+            Thread.Sleep(2000);
+        }
+
+        public static void Main()
+        {
+            ThreadPool.QueueUserWorkItem(Processitem, "Computer");
+            ThreadPool.QueueUserWorkItem(Processitem, "Laptop");
+            ThreadPool.QueueUserWorkItem(Processitem, "Mobile");
+            ThreadPool.QueueUserWorkItem(Processitem, "CPU");
+            ThreadPool.QueueUserWorkItem(Processitem, "Printer");
+
+            Thread.Sleep(5000);
+            Console.WriteLine("Completed :) ");
+
+        }
+    }
+}
