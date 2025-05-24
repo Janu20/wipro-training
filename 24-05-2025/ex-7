@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    internal class SequenceVsParallel
+    {
+        public static async Task SimulateWorkAsync(string name, int delay)
+        {
+           
+            Console.WriteLine("Name = " + name + " Delay = " + delay);
+            await Task.Delay(delay);
+        }
+
+        public static async Task Main(string[] args)
+        {
+
+            Console.WriteLine("Sequentially running...");
+            Stopwatch sw = new Stopwatch();
+
+            sw.Start();
+            await SimulateWorkAsync("t1", 1000);
+            await SimulateWorkAsync("t2", 4000);
+            await SimulateWorkAsync("t3", 2000);
+
+            sw.Stop();
+
+            Console.WriteLine("Time taken sequentially : " + sw.ElapsedMilliseconds + " ms");
+
+            Console.WriteLine("Parallely running...");
+            Stopwatch sw1  = new Stopwatch();
+
+            sw1.Start();
+            Task tt1 = SimulateWorkAsync("t1", 1000);
+            Task tt2 = SimulateWorkAsync("t2", 4000);
+            Task tt3 = SimulateWorkAsync("t3", 2000);
+
+            await Task.WhenAll(tt1, tt2, tt3);
+            sw1.Stop();
+
+            Console.WriteLine("Time taken Parallely  : " + sw1.ElapsedMilliseconds + " ms");
+
+
+        }
+    }
+}
