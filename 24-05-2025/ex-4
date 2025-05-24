@@ -1,0 +1,37 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    internal class Downloads
+    {
+        static async Task Downloadfile(string filename, int sec)
+        {
+            Console.WriteLine(filename + " is downloaded within " + sec + " ms ");
+            await Task.Delay(sec);
+        }
+
+        public static async Task Main(string[] args)
+        {
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
+
+            Task t1 = Downloadfile("file1", 2000);
+            Task t2 = Downloadfile("file2", 1000);
+            Task t3 = Downloadfile("file3", 500);
+
+            await Task.WhenAll(t1, t2, t3);
+
+            sw.Stop();
+
+
+
+            Console.WriteLine("All files downloaded :)");
+            Console.WriteLine("Time taken to download all 3 files is : " + sw.ElapsedMilliseconds + " ms ");
+        }
+    }
+}
