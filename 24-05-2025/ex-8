@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    internal class exceptionhandle
+    {
+        public static async Task RiskyTaskAsync(string name)
+        {
+
+            Console.WriteLine("Name : " + name);
+
+            if (name == "T3")
+            {
+                throw new Exception();
+            }
+
+
+
+            await Task.Delay(1000);
+            Console.WriteLine(name + "Completed");
+        }
+        public static async Task Main(string[] args)
+        {
+
+
+            Task t1 = RiskyTaskAsync("T1");
+            Task t2 = RiskyTaskAsync("T2");
+            Task t3 = RiskyTaskAsync("T3");
+
+            try
+            {
+                await Task.WhenAll(t1, t2, t3);
+            }
+
+            catch (Exception e)
+            {
+                Console.WriteLine("Error message : " + e.Message);
+            }
+        }
+    }
+}
