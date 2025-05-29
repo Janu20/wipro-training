@@ -1,0 +1,207 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\admin\\source\\repos\\WebApplication8\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AF97660C-8428-4E29-BE9C-EA4A7487F590}|WebApplication8\\WebApplication8.csproj|c:\\users\\admin\\source\\repos\\webapplication8\\webapplication8\\views\\employees\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF97660C-8428-4E29-BE9C-EA4A7487F590}|WebApplication8\\WebApplication8.csproj|solutionrelative:webapplication8\\views\\employees\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF97660C-8428-4E29-BE9C-EA4A7487F590}|WebApplication8\\WebApplication8.csproj|c:\\users\\admin\\source\\repos\\webapplication8\\webapplication8\\views\\about\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF97660C-8428-4E29-BE9C-EA4A7487F590}|WebApplication8\\WebApplication8.csproj|solutionrelative:webapplication8\\views\\about\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF97660C-8428-4E29-BE9C-EA4A7487F590}|WebApplication8\\WebApplication8.csproj|c:\\users\\admin\\source\\repos\\webapplication8\\webapplication8\\views\\contacts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF97660C-8428-4E29-BE9C-EA4A7487F590}|WebApplication8\\WebApplication8.csproj|solutionrelative:webapplication8\\views\\contacts\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF97660C-8428-4E29-BE9C-EA4A7487F590}|WebApplication8\\WebApplication8.csproj|c:\\users\\admin\\source\\repos\\webapplication8\\webapplication8\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF97660C-8428-4E29-BE9C-EA4A7487F590}|WebApplication8\\WebApplication8.csproj|solutionrelative:webapplication8\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF97660C-8428-4E29-BE9C-EA4A7487F590}|WebApplication8\\WebApplication8.csproj|c:\\users\\admin\\source\\repos\\webapplication8\\webapplication8\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF97660C-8428-4E29-BE9C-EA4A7487F590}|WebApplication8\\WebApplication8.csproj|solutionrelative:webapplication8\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF97660C-8428-4E29-BE9C-EA4A7487F590}|WebApplication8\\WebApplication8.csproj|c:\\users\\admin\\source\\repos\\webapplication8\\webapplication8\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AF97660C-8428-4E29-BE9C-EA4A7487F590}|WebApplication8\\WebApplication8.csproj|solutionrelative:webapplication8\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF97660C-8428-4E29-BE9C-EA4A7487F590}|WebApplication8\\WebApplication8.csproj|c:\\users\\admin\\source\\repos\\webapplication8\\webapplication8\\controllers\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF97660C-8428-4E29-BE9C-EA4A7487F590}|WebApplication8\\WebApplication8.csproj|solutionrelative:webapplication8\\controllers\\about.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF97660C-8428-4E29-BE9C-EA4A7487F590}|WebApplication8\\WebApplication8.csproj|c:\\users\\admin\\source\\repos\\webapplication8\\webapplication8\\controllers\\contacts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF97660C-8428-4E29-BE9C-EA4A7487F590}|WebApplication8\\WebApplication8.csproj|solutionrelative:webapplication8\\controllers\\contacts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF97660C-8428-4E29-BE9C-EA4A7487F590}|WebApplication8\\WebApplication8.csproj|c:\\users\\admin\\source\\repos\\webapplication8\\webapplication8\\models\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF97660C-8428-4E29-BE9C-EA4A7487F590}|WebApplication8\\WebApplication8.csproj|solutionrelative:webapplication8\\models\\contact.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\admin\\source\\repos\\WebApplication8\\WebApplication8\\Migrations\\20250529044140_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:WebApplication8\\Migrations\\20250529044140_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AF97660C-8428-4E29-BE9C-EA4A7487F590}|WebApplication8\\WebApplication8.csproj|c:\\users\\admin\\source\\repos\\webapplication8\\webapplication8\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AF97660C-8428-4E29-BE9C-EA4A7487F590}|WebApplication8\\WebApplication8.csproj|solutionrelative:webapplication8\\controllers\\employeescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\WebApplication8\\WebApplication8\\Views\\Employees\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication8\\Views\\Employees\\Index.cshtml",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\WebApplication8\\WebApplication8\\Views\\Employees\\Index.cshtml*",
+              "RelativeToolTip": "WebApplication8\\Views\\Employees\\Index.cshtml*",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAQwKMAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-29T05:55:39.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\WebApplication8\\WebApplication8\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebApplication8\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\WebApplication8\\WebApplication8\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebApplication8\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-29T05:16:14.712Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\WebApplication8\\WebApplication8\\Views\\Contacts\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication8\\Views\\Contacts\\Index.cshtml",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\WebApplication8\\WebApplication8\\Views\\Contacts\\Index.cshtml",
+              "RelativeToolTip": "WebApplication8\\Views\\Contacts\\Index.cshtml",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAQwKoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-29T05:12:47.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Contacts.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\WebApplication8\\WebApplication8\\Controllers\\Contacts.cs",
+              "RelativeDocumentMoniker": "WebApplication8\\Controllers\\Contacts.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\WebApplication8\\WebApplication8\\Controllers\\Contacts.cs",
+              "RelativeToolTip": "WebApplication8\\Controllers\\Contacts.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T05:11:40.867Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Contact.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\WebApplication8\\WebApplication8\\Models\\Contact.cs",
+              "RelativeDocumentMoniker": "WebApplication8\\Models\\Contact.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\WebApplication8\\WebApplication8\\Models\\Contact.cs",
+              "RelativeToolTip": "WebApplication8\\Models\\Contact.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T05:08:40.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\WebApplication8\\WebApplication8\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication8\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\WebApplication8\\WebApplication8\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "WebApplication8\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAALMAAAAAAAAAAAAswMgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-29T04:46:23.696Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20250529044140_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\WebApplication8\\WebApplication8\\Migrations\\20250529044140_InitialCreate.cs",
+              "RelativeDocumentMoniker": "WebApplication8\\Migrations\\20250529044140_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\WebApplication8\\WebApplication8\\Migrations\\20250529044140_InitialCreate.cs",
+              "RelativeToolTip": "WebApplication8\\Migrations\\20250529044140_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T04:41:40.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\WebApplication8\\WebApplication8\\Views\\about\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebApplication8\\Views\\about\\Index.cshtml",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\WebApplication8\\WebApplication8\\Views\\about\\Index.cshtml*",
+              "RelativeToolTip": "WebApplication8\\Views\\about\\Index.cshtml*",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAAAIgAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-29T05:47:39.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "About.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\WebApplication8\\WebApplication8\\Controllers\\About.cs",
+              "RelativeDocumentMoniker": "WebApplication8\\Controllers\\About.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\WebApplication8\\WebApplication8\\Controllers\\About.cs",
+              "RelativeToolTip": "WebApplication8\\Controllers\\About.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T05:47:04.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\WebApplication8\\WebApplication8\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "WebApplication8\\Models\\Employee.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\WebApplication8\\WebApplication8\\Models\\Employee.cs",
+              "RelativeToolTip": "WebApplication8\\Models\\Employee.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAIwBAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T04:36:17.071Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EmployeesController.cs",
+              "DocumentMoniker": "C:\\Users\\admin\\source\\repos\\WebApplication8\\WebApplication8\\Controllers\\EmployeesController.cs",
+              "RelativeDocumentMoniker": "WebApplication8\\Controllers\\EmployeesController.cs",
+              "ToolTip": "C:\\Users\\admin\\source\\repos\\WebApplication8\\WebApplication8\\Controllers\\EmployeesController.cs",
+              "RelativeToolTip": "WebApplication8\\Controllers\\EmployeesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T04:40:40.936Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

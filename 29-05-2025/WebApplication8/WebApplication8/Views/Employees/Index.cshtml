@@ -1,0 +1,211 @@
+﻿@model IEnumerable<WebApplication8.Models.Employee>
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Employees";
+}
+
+<style>
+    /* Reset & container */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    .portal-container {
+        margin: 0;
+        padding: 0;
+    }
+
+    .portal-wrapper {
+        display: flex;
+        min-height: calc(100vh - 56px);
+        background: #f7f8fa;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        position: fixed;
+        top: 56px;
+        left: 0;
+        bottom: 0;
+        width: 220px;
+        background: linear-gradient(180deg, #ff6f91, #ffc75f);
+        color: white;
+        padding: 30px 20px;
+        box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+        overflow-y: auto;
+        z-index: 1000;
+    }
+
+        .sidebar h2 {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin: 15px 0;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+
+            .sidebar a:hover {
+                background: rgba(255,255,255,0.2);
+            }
+
+    /* Main content */
+    .main-container {
+        flex: 1;
+        margin-left: 220px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header {
+        background: linear-gradient(90deg, #ff6f91, #ff9671, #ffc75f);
+        color: white;
+        padding: 20px 0;
+        text-align: center;
+        font-size: 1.8em;
+        font-weight: 600;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .content {
+        flex: 1;
+        padding: 30px 20px;
+    }
+
+        .content h2 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 1.6em;
+        }
+
+    .btn-create {
+        display: inline-block;
+        background: linear-gradient(90deg, #ff9671, #ff6f61);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: 500;
+        margin-bottom: 15px;
+        transition: opacity 0.2s;
+    }
+
+        .btn-create:hover {
+            opacity: 0.9;
+        }
+
+    .table-card {
+        background: #fff;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+        overflow-x: auto;
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        padding: 12px 8px;
+        text-align: left;
+        border-bottom: 1px solid #eee;
+    }
+
+    th {
+        background: #fafafa;
+        color: #555;
+    }
+
+    tr:hover {
+        background: #fafafa;
+    }
+
+    .action-links a {
+        margin-right: 10px;
+        text-decoration: none;
+        color: #ff6f61;
+        font-weight: 500;
+        transition: color 0.2s;
+    }
+
+        .action-links a:hover {
+            color: #ff9671;
+        }
+
+    .portal-footer {
+        background: #f0f0f0;
+        text-align: center;
+        padding: 15px;
+        font-size: 0.9em;
+        color: #666;
+    }
+</style>
+
+<div class="portal-container container-fluid p-0">
+    <div class="portal-wrapper">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>🌟 Wipro</h2>
+            <a href="/Employee/Profile">👤 My Profile</a>
+            <a href="/Leave/Index">🌴 Leave Requests</a>
+            <a href="/Payroll/Index">💰 Pay Slips</a>
+            <a href="/Announcements">📢 Announcements</a>
+            <a href="/Settings">⚙️ Settings</a>
+            <a href="/Account/Logout">🚪 Logout</a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-container">
+            <div class="header">Employees</div>
+            <div class="content">
+                <h2>Manage Employees</h2>
+                <a asp-action="Create" class="btn-create">+ Create New Employee</a>
+                <div class="table-card">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>First Name</th>
+                                <th>Last Name</th>
+                                <th>Age</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var emp in Model)
+                            {
+                                <tr>
+                                    <td>@emp.FirstName</td>
+                                    <td>@emp.LastName</td>
+                                    <td>@emp.EmployeeAge</td>
+                                    <td>@emp.MailID</td>
+                                    <td>@emp.Phone</td>
+                                    <td class="action-links">
+                                        <a asp-action="Edit" asp-route-id="@emp.EmployeeId">Edit</a>
+                                        <a asp-action="Details" asp-route-id="@emp.EmployeeId">Details</a>
+                                        <a asp-action="Delete" asp-route-id="@emp.EmployeeId">Delete</a>
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="portal-footer">
+                &copy; @DateTime.Now.Year Wipro Limited. All rights reserved.
+            </div>
+        </div>
+    </div>
+</div>

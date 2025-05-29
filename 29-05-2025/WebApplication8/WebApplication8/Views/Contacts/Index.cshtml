@@ -1,0 +1,213 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Container spans full width under navbar */
+    .portal-container {
+        margin: 0;
+        padding: 0;
+    }
+
+    .portal-wrapper {
+        display: flex;
+        min-height: calc(100vh - 56px);
+        background: #f7f8fa;
+    }
+
+    /* Sidebar (same as home) */
+    .sidebar {
+        position: fixed;
+        top: 56px;
+        left: 0;
+        bottom: 0;
+        width: 220px;
+        background: linear-gradient(180deg, #ff6f91, #ffc75f);
+        color: white;
+        padding: 30px 20px;
+        box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+        overflow-y: auto;
+        z-index: 1000;
+    }
+
+        .sidebar h2 {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 30px;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            margin: 15px 0;
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background 0.2s;
+        }
+
+            .sidebar a:hover {
+                background: rgba(255,255,255,0.2);
+            }
+
+    /* Main area pushed right of sidebar */
+    .main-container {
+        flex: 1;
+        margin-left: 220px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Page header */
+    .header {
+        background: linear-gradient(90deg, #ff6f91, #ff9671, #ffc75f);
+        color: white;
+        padding: 25px 0;
+        text-align: center;
+        font-size: 1.8em;
+        font-weight: 600;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Form card */
+    .form-wrapper {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+    }
+
+    .contact-card {
+        background: #ffffff;
+        width: 100%;
+        max-width: 600px;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    }
+
+        .contact-card h2 {
+            margin-bottom: 20px;
+            color: #333;
+            font-size: 1.8em;
+            border-bottom: 2px solid #ffc75f;
+            padding-bottom: 10px;
+        }
+
+        .contact-card label {
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: #555;
+            font-weight: 500;
+        }
+
+        .contact-card input,
+        .contact-card textarea {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1em;
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+
+            .contact-card input:focus,
+            .contact-card textarea:focus {
+                border-color: #ff9671;
+                outline: none;
+            }
+
+        .contact-card textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .contact-card button {
+            margin-top: 20px;
+            background: linear-gradient(90deg, #ff9671, #ff6f61);
+            border: none;
+            color: white;
+            padding: 12px 25px;
+            font-size: 1em;
+            font-weight: 600;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+            .contact-card button:hover {
+                opacity: 0.9;
+            }
+
+    /* Footer */
+    .portal-footer {
+        background: #f0f0f0;
+        text-align: center;
+        padding: 15px;
+        font-size: 0.9em;
+        color: #666;
+    }
+</style>
+
+<div class="portal-container container-fluid p-0">
+    <div class="portal-wrapper">
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>🌟 Wipro</h2>
+            <a href="/Employee/Profile">👤 My Profile</a>
+            <a href="/Leave/Index">🌴 Leave Requests</a>
+            <a href="/Payroll/Index">💰 Pay Slips</a>
+            <a href="/Announcements">📢 Announcements</a>
+            <a href="/Settings">⚙️ Settings</a>
+            <a href="/Account/Logout">🚪 Logout</a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-container">
+            <div class="header">Contact Us</div>
+
+            <div class="form-wrapper">
+                <div class="contact-card">
+                    <h2>Get in Touch</h2>
+
+                    @if (TempData["Message"] != null)
+                    {
+                        <div style="padding:12px; background:#e1f5e1; color:#2a7a2a; border-radius:6px; margin-bottom:15px; font-weight:500;">
+                            @TempData["Message"]
+                        </div>
+                    }
+
+                    <form asp-action="Index" method="post" novalidate>
+                        <label for="Name">Name</label>
+                        <input type="text" id="Name" name="Name" value="@Model?.Name" required />
+
+                        <label for="Email">Email</label>
+                        <input type="email" id="Email" name="Email" value="@Model?.Email" required />
+
+                        <label for="PhoneNumber">Phone Number</label>
+                        <input type="text" id="PhoneNumber" name="PhoneNumber" value="@Model?.PhoneNumber" />
+
+                        <label for="Query">Your Message</label>
+                        <textarea id="Query" name="Query" required>@Model?.Query</textarea>
+
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="portal-footer">
+                &copy; @DateTime.Now.Year Wipro Limited. All rights reserved.
+            </div>
+        </div>
+    </div>
+</div>
